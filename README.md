@@ -2,6 +2,8 @@
 
 Monitor [CloudFlare][] domains, and remove bad servers from the pool.
 
+![Sunlight][]
+
 
 ## Status
 
@@ -44,3 +46,4 @@ alerts if one of your servers goes down and gets removed from the DNS pool.
 
   [CloudFlare]: https://www.cloudflare.com/ "CloudFlare"
   [Stormpath]: https://www.stormpath.com/ "Stormpath"
+  [Sunlight]: https://github.com/stormpath/glare/raw/master/assets/images/sunlight.jpg "Sunlight Sketch"
