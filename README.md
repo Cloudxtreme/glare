@@ -44,6 +44,19 @@ alerts if one of your servers goes down and gets removed from the DNS pool.
 **Magic!**
 
 
+## Health Checks
+
+Performing health checks is at the core of what `glare` does -- health checks in
+`glare` are extremely simple.
+
+- You specify a URL you'd like to health check, this could be something like
+  `/glare`.
+- For each [CloudFlare][] domain that is managed, `glare` will hit `<your_ip or
+  domain>/glare` with an `HTTP GET` request.  If `glare` sees an `HTTP 200`
+  response, everything will be considered GOOD.  If `glare` gets anything else,
+  the server will considered bad and removed from the [CloudFlare][] DNS pool.
+
+
   [CloudFlare]: https://www.cloudflare.com/ "CloudFlare"
   [Stormpath]: https://www.stormpath.com/ "Stormpath"
   [Sunlight]: https://github.com/stormpath/glare/raw/master/assets/images/sunlight.jpg "Sunlight Sketch"
