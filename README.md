@@ -52,9 +52,10 @@ Performing health checks is at the core of what `glare` does -- health checks in
 - You specify a URL you'd like to health check, this could be something like
   `/glare`.
 - For each [CloudFlare][] domain that is managed, `glare` will hit `<your_ip or
-  domain>/glare` with an `HTTP GET` request.  If `glare` sees an `HTTP 200`
-  response, everything will be considered GOOD.  If `glare` gets anything else,
-  the server will considered bad and removed from the [CloudFlare][] DNS pool.
+  domain>/glare` with an `HTTP GET` request.  If `glare` sees an `HTTP 2XX` or
+  `HTTP 3XX` response, everything will be considered GOOD.  If `glare` gets
+  anything else, the server will considered bad and removed from the
+  [CloudFlare][] DNS pool.
 
 
   [CloudFlare]: https://www.cloudflare.com/ "CloudFlare"
