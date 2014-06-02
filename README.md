@@ -1,6 +1,6 @@
 # glare
 
-Monitor [CloudFlare][] domains, and remove bad servers from the pool.
+Monitor [CloudFlare][] domains, remove bad servers from the pool.
 
 ![Sunlight][]
 
