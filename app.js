@@ -13,7 +13,7 @@ var index_routes = require('./routes/index');
 var auth_routes = require('./routes/auth');
 
 var app = express();
-var strategy = new StormpathStrategy();
+var strategy = new StormpathStrategy({
   apiKeyId: process.env['STORMPATH_API_KEY_ID'],
   apiKeySecret: process.env['STORMPATH_API_KEY_SECRET'],
   appHref: process.env['STORMPATH_APP_HREF'],
