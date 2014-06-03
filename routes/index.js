@@ -3,8 +3,13 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'The CloudFlare DNS Monitoring Service' });
+  res.render('index', { title: 'Glare - The CloudFlare DNS Monitoring Service' });
 });
+
+
+/* GET registration page. */
+router.get('/register', function(req, res) {
+  res.render()
 });
 
 module.exports = router;
