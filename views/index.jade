@@ -21,5 +21,7 @@ block content
           ensuring your users don't get redirected to a dead server.
 
       .text-center
-        button.btn.btn-default.btn-success.btn-lg(type='button') Sign Up Now (It's Free!)
-        button.btn.btn-default.btn-primary.btn-lg(type='button') Log In
+        a(href='/register')
+          button.btn.btn-default.btn-success.btn-lg(type='button') Sign Up Now (It's Free!)
+        a(href='/login')
+          button.btn.btn-default.btn-primary.btn-lg(type='button') Log In
