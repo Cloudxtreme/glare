@@ -1,5 +1,25 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .page-header.text-center
+    h1.
+      <a href="/">Glare</a>
+    h3.
+      The <a href="https://www.cloudflare.com/">CloudFlare</a> DNS monitoring service.
+
+  .row
+    .col-md-offset-2.col-md-8
+      .jumbotron
+        h2 Glare makes your web apps reliable.
+        p.
+          Glare automatically monitors your <a href="https://www.cloudflare.com/">CloudFlare</a>
+          domains and performs routine health checks to ensure your backend
+          servers aren't down.
+        p.
+          If a server fails to respond to the HTTP health checks, Glare will
+          automatically remove the dead server from your CloudFlare DNS pool,
+          ensuring your users don't get redirected to a dead server.
+
+      .text-center
+        button.btn.btn-default.btn-success.btn-lg(type='button') Sign Up Now (It's Free!)
+        button.btn.btn-default.btn-primary.btn-lg(type='button') Log In
