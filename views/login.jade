@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .row.login
+    .col-md-offset-4.col-md-4
+      p.big.bg-info.
+        Login to your Glare account below.  Don't have an account?  Create one
+        <a href='/register'>here</a>.
+
+      form(role='form')
+        .form-group
+          input.form-control(type='email', name='email', placeholder='Email', required)
+        .form-group
+          input.form-control(type='password', name='password', placeholder='Password', required)
+        button.btn.btn-default(type='submit') Login

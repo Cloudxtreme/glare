@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .row.register
+    .col-md-offset-4.col-md-4
+      p.big.bg-info.
+        Enter your information below to create a new Glare account.
+
+      form(role='form')
+        .form-group
+          input.form-control(type='text', name='first-name', placeholder='First Name', autofocus, required)
+        .form-group
+          input.form-control(type='text', name='last-name', placeholder='Last Name', required)
+        .form-group
+          input.form-control(type='email', name='email', placeholder='Email', required)
+        .form-group
+          input.form-control(type='password', name='password', placeholder='Password', required)
+        button.btn.btn-default(type='submit') Submit
