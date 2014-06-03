@@ -6,10 +6,9 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Glare - The CloudFlare DNS Monitoring Service' });
 });
 
-
 /* GET registration page. */
 router.get('/register', function(req, res) {
-  res.render()
+  res.render('register', { title: 'Glare - Create an Account' });
 });
 
 module.exports = router;
