@@ -64,13 +64,11 @@ router.get('/login', function(req, res) {
 });
 
 /* POST login page. */
-router.post('/login', function(req, res) {
-  passport.authenticate('stormpath', {
-    successRedirect: '/dashboard',
-    failureRedirect: '/login',
-    failureFlash: 'Invalid email or password.',
-  });
-});
+router.post('/login', passport.authenticate('stormpath', {
+  successRedirect: '/dashboard',
+  failureRedirect: '/login',
+  failureFlash: 'Invalid email or password.',
+}));
 
 /* GET logout page. */
 router.get('/logout', function(req, res) {
