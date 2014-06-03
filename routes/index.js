@@ -1,19 +1,25 @@
 var express = require('express');
 var router = express.Router();
 
+
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Glare - The CloudFlare DNS Monitoring Service' });
+  res.render('index', {
+    title: 'Glare - The CloudFlare DNS Monitoring Service',
+    user: req.user,
+  });
 });
 
-/* GET registration page. */
-router.get('/register', function(req, res) {
-  res.render('register', { title: 'Glare - Create an Account' });
-});
+/* GET dashboard page. */
+router.get('/dashboard', function(req, res) {
+  if (!req.user || req.user.status !== 'ENABLED') {
+    return res.redirect('/login');
+  }
 
-/* GET login page. */
-router.get('/login', function(req, res) {
-  res.render('login', { title: 'Glare - Login to Your Account' });
+  res.render('dashboard', {
+    title: 'Glare - Dashboard',
+    user: req.user,
+  });
 });
 
 module.exports = router;
