@@ -14,7 +14,7 @@ router.get('/register', function(req, res) {
 
 /* POST registration page. */
 router.post('/register', function(req, res) {
-  var email = req.body.email;
+  var email = req.body.username;
   var password = req.body.password;
   var firstName = req.body['first-name'];
   var lastName = req.body['last-name'];
