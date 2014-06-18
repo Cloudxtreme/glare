@@ -6,7 +6,6 @@ var stormpath = require('stormpath');
 
 router.get('/register', function(req, res) {
   res.render('register', {
-    title: 'Glare - Create an Account',
     error: req.flash('error')[0],
   });
 });
