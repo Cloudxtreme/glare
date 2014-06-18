@@ -28,7 +28,6 @@ router.post('/register', function(req, res) {
   client.getApplication(process.env.STORMPATH_APP_HREF, function(err, app) {
     if (err) {
       return res.render('register', {
-        title: 'Glare - Create an Account',
         error: 'Server error, please try again.',
       });
     }
@@ -42,7 +41,6 @@ router.post('/register', function(req, res) {
     }, function(err, acc) {
       if (err) {
         return res.render('register', {
-          title: 'Glare - Create an Account',
           error: err.userMessage,
         });
       } else {
@@ -55,7 +53,7 @@ router.post('/register', function(req, res) {
 });
 
 router.get('/login', function(req, res) {
-  res.render('login', { title: 'Glare - Login to Your Account' });
+  res.render('login');
 });
 
 router.post('/login', passport.authenticate('stormpath', {
