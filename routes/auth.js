@@ -18,7 +18,6 @@ router.post('/register', function(req, res) {
 
   if (!email || !password || !firstName || !lastName) {
     return res.render('register', {
-      title: 'Glare - Create an Account',
       error: 'Missing fields.',
     });
   }
