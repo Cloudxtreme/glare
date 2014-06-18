@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 
 
-/* GET home page. */
 router.get('/', function(req, res) {
   res.render('index', {
     title: 'Glare - The CloudFlare DNS Monitoring Service',
@@ -10,7 +9,6 @@ router.get('/', function(req, res) {
   });
 });
 
-/* GET dashboard page. */
 router.get('/dashboard', function(req, res) {
   if (!req.user || req.user.status !== 'ENABLED') {
     return res.redirect('/login');
