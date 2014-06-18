@@ -4,7 +4,6 @@ var passport = require('passport');
 var stormpath = require('stormpath');
 
 
-/* GET registration page. */
 router.get('/register', function(req, res) {
   res.render('register', {
     title: 'Glare - Create an Account',
@@ -12,7 +11,6 @@ router.get('/register', function(req, res) {
   });
 });
 
-/* POST registration page. */
 router.post('/register', function(req, res) {
   var email = req.body.username;
   var password = req.body.password;
@@ -58,19 +56,16 @@ router.post('/register', function(req, res) {
   });
 });
 
-/* GET login page. */
 router.get('/login', function(req, res) {
   res.render('login', { title: 'Glare - Login to Your Account' });
 });
 
-/* POST login page. */
 router.post('/login', passport.authenticate('stormpath', {
   successRedirect: '/dashboard',
   failureRedirect: '/login',
   failureFlash: 'Invalid email or password.',
 }));
 
-/* GET logout page. */
 router.get('/logout', function(req, res) {
   req.logout();
   res.redirect('/');
